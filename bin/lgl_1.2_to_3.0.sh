@@ -31,13 +31,15 @@ python bin/insert_openapi_security.py $OPENAPI_DEST_DIR/openapi.json $OPENAPI_DE
 # Set input and output directories
 INPUT_DIR=$OPENAPI_DEST_DIR
 
+# Looks like Python generates docs
+#
 # Generate from the 3.0 spec
-npx @openapitools/openapi-generator-cli \
-  generate -i "$OPENAPI_DEST_DIR/openapi.json" \
-  -g markdown \
-  -o $DOCS_DEST_DIR \
-  --package-name $PACKAGE_NAME \
-  --additional-properties=packageVersion=$VERSION
+# npx @openapitools/openapi-generator-cli \
+#  generate -i "$OPENAPI_DEST_DIR/openapi.json" \
+#  -g markdown \
+#  -o $DOCS_DEST_DIR \
+#  --package-name $PACKAGE_NAME \
+#  --additional-properties=packageVersion=$VERSION
 
 npx @openapitools/openapi-generator-cli \
   generate -i "$OPENAPI_DEST_DIR/openapi.json" \
@@ -46,4 +48,8 @@ npx @openapitools/openapi-generator-cli \
   --package-name $PACKAGE_NAME \
   --additional-properties=packageVersion=$VERSION
 
-python clients/lgl_openapi_3.0_client/setup.py sdist bdist_wheel
+cd clients/lgl_openapi_3.0_client/
+
+sed -i '' 's/license = "NoLicense"/license = "MIT"/' pyproject.toml
+
+python setup.py sdist bdist_wheel

@@ -211,6 +211,3 @@ __marimo__/
 api_defs/openapi_3.0/.openapi-generator-ignore
 api_defs/openapi_3.0/.openapi-generator/
 api_defs/swagger_1.2/
-clients/
-docs/.openapi-generator-ignore
-docs/.openapi-generator/
