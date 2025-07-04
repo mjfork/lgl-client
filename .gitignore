@@ -10,7 +10,8 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-dist/
+# Commenting out dist/ so that the generated client is committed
+# dist/
 downloads/
 eggs/
 .eggs/
