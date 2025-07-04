@@ -1,0 +1,19 @@
+# ConstituentRelationships_show
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **api\_version** | **String** |  | [default to null] |
+| **id** | **Integer** | ConstituentRelationship ID | [default to null] |
+| **relationship\_type\_id** | **Integer** | Relationship Type ID | [optional] [default to null] |
+| **constituent\_id** | **Integer** | Constituent ID | [optional] [default to null] |
+| **related\_constituent\_id** | **Integer** | Related Constituent ID | [optional] [default to null] |
+| **name** | **String** | Relationship name | [optional] [default to null] |
+| **description** | **String** | Relationship description | [optional] [default to null] |
+| **auto\_soft\_credit** | **Boolean** | Automatically soft credit? | [optional] [default to null] |
+| **also\_acknowledge** | **Boolean** | Send memorial acknowledgements? | [optional] [default to null] |
+| **share\_address** | **Integer** | Share address? | [optional] [default to null] |
+| **share\_phone** | **Integer** | Share phone? | [optional] [default to null] |
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+

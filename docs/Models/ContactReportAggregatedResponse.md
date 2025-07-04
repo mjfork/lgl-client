@@ -1,0 +1,16 @@
+# ContactReportAggregatedResponse
+## Properties
+
+| Name | Type | Description | Notes |
+|------------ | ------------- | ------------- | -------------|
+| **id** | **Integer** | Contact Report ID | [default to null] |
+| **constituent\_id** | **Integer** | Constituent Id | [default to null] |
+| **name** | **String** | Name | [optional] [default to null] |
+| **contact\_report\_type\_id** | **Integer** | Contact Report Type Id | [optional] [default to null] |
+| **contact\_report\_type\_name** | **String** | Contact Report Type Name | [optional] [default to null] |
+| **original\_date** | **date** |  | [optional] [default to null] |
+| **text** | **String** | Text | [default to null] |
+| **team\_member\_email** | **String** | Team Member Email | [optional] [default to null] |
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
