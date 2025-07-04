@@ -4,7 +4,7 @@ This guide explains how to generate the Python client library and Markdown docum
 
 ## Prerequisites
 
-- **Python 3.x**
+- **Python 3.9+**
 - **Node.js** (for OpenAPI Generator CLI)
 - **@openapitools/openapi-generator-cli** (install globally or use npx)
 - **Internet access** (to fetch LGL API specs)
@@ -52,3 +52,4 @@ pip install -r requirements.txt
 ## Customization
 
 - Change OpenAPI Generator options in the shell script to generate clients in other languages or formats.
+- The generated client package includes its own detailed README in `clients/lgl_openapi_3.0_client/README.md` with advanced usage, authentication, and configuration options. Refer to it for more information.

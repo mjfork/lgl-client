@@ -41,3 +41,34 @@ Refer to the generated documentation in the `docs/` directory for detailed usage
 ## Support
 
 For issues with the generated client, please open an issue in this repository or consult the official LGL API documentation.
+
+**Requires Python 3.9+**
+
+For advanced usage, authentication options, and configuration, see the generated client README in `clients/lgl_openapi_3.0_client/README.md`.
+
+## Running Tests
+
+To run all tests for the generated client, simply execute:
+
+```bash
+bash bin/test_client.sh
+```
+
+This script will install the necessary dependencies and run the test suite automatically.
+
+## Supported Authentication Methods
+
+The generated client supports multiple authentication methods:
+- **API Key** (recommended):
+  ```python
+  configuration = Configuration(api_key={"access_token": "YOUR_API_KEY"})
+  ```
+- **HTTP Basic Auth**:
+  ```python
+  configuration = Configuration(username="YOUR_USERNAME", password="YOUR_PASSWORD")
+  ```
+- **Bearer Token**:
+  ```python
+  configuration = Configuration(access_token="YOUR_BEARER_TOKEN")
+  ```
+See the generated client README in `clients/lgl_openapi_3.0_client/README.md` for more details and examples.
