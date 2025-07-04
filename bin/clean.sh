@@ -5,4 +5,4 @@ rm -rf build
 rm -rf clients
 rm -rf dist
 rm -rf docs
-rm -rf openapi_client.egg-info
+rm -rf lgl_openapi_3_0_client.egg-info
