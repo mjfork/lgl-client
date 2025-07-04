@@ -4,6 +4,7 @@ DOCS_DEST_DIR="docs"
 SWAGGER_DEST_DIR="api_defs/swagger_1.2"
 OPENAPI_DEST_DIR="api_defs/openapi_3.0"
 CLIENT_DEST_DIR="clients/lgl_openapi_3.0_client"
+PACKAGE_NAME="lgl_openapi_3_0_client"
 
 mkdir -p "$SWAGGER_DEST_DIR"
 curl -s "$ROOT_URL" -o "$SWAGGER_DEST_DIR/api-docs.json"
@@ -22,9 +23,9 @@ npx @openapitools/openapi-generator-cli generate -i $SWAGGER_DEST_DIR/api-docs.j
   -o $OPENAPI_DEST_DIR \
   --skip-validate-spec
 
-python build/fix_openapi_schema.py $OPENAPI_DEST_DIR/openapi.json $OPENAPI_DEST_DIR/openapi.json
+python bin/fix_openapi_schema.py $OPENAPI_DEST_DIR/openapi.json $OPENAPI_DEST_DIR/openapi.json
 
-python build/insert_openapi_security.py $OPENAPI_DEST_DIR/openapi.json $OPENAPI_DEST_DIR/openapi.json
+python bin/insert_openapi_security.py $OPENAPI_DEST_DIR/openapi.json $OPENAPI_DEST_DIR/openapi.json
 
 # Set input and output directories
 INPUT_DIR=$OPENAPI_DEST_DIR
@@ -34,10 +35,12 @@ npx @openapitools/openapi-generator-cli \
   generate -i "$OPENAPI_DEST_DIR/openapi.json" \
   -g markdown \
   -o $DOCS_DEST_DIR
+  --package-name $PACKAGE_NAME
 
 npx @openapitools/openapi-generator-cli \
   generate -i "$OPENAPI_DEST_DIR/openapi.json" \
   -g python \
   -o $CLIENT_DEST_DIR
+  --package-name $PACKAGE_NAME
 
 python clients/lgl_openapi_3.0_client/setup.py sdist bdist_wheel
