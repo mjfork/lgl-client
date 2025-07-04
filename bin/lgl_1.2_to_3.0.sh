@@ -34,13 +34,13 @@ INPUT_DIR=$OPENAPI_DEST_DIR
 npx @openapitools/openapi-generator-cli \
   generate -i "$OPENAPI_DEST_DIR/openapi.json" \
   -g markdown \
-  -o $DOCS_DEST_DIR
+  -o $DOCS_DEST_DIR \
   --package-name $PACKAGE_NAME
 
 npx @openapitools/openapi-generator-cli \
   generate -i "$OPENAPI_DEST_DIR/openapi.json" \
   -g python \
-  -o $CLIENT_DEST_DIR
+  -o $CLIENT_DEST_DIR \
   --package-name $PACKAGE_NAME
 
 python clients/lgl_openapi_3.0_client/setup.py sdist bdist_wheel
