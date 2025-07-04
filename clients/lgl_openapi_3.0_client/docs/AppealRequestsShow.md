@@ -1,0 +1,43 @@
+# AppealRequestsShow
+
+appeal_request object.
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**api_version** | **str** |  | 
+**id** | **int** | Appeal Request Id | 
+**constituent_id** | **int** | Constituent Id | 
+**constituent_name** | **str** | Constituent Name | [optional] 
+**appeal_id** | **int** | Appeal Id | 
+**name** | **str** | Appeal Name | [optional] 
+**raised** | **float** |  | [optional] 
+**status** | **str** | Status | [optional] 
+**ask_amount** | **float** |  | [optional] 
+**assigned_to** | **int** | Assigned to team member id | [optional] 
+**custom_fields** | [**List[CustomField]**](CustomField.md) | Appeal request custom fields (Categories) | [optional] 
+**custom_attrs** | [**List[CustomAttr]**](CustomAttr.md) | Appeal request custom attributes | [optional] 
+**created_at** | **datetime** |  | [optional] 
+**updated_at** | **datetime** |  | [optional] 
+
+## Example
+
+```python
+from lgl_openapi_3_0_client.models.appeal_requests_show import AppealRequestsShow
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of AppealRequestsShow from a JSON string
+appeal_requests_show_instance = AppealRequestsShow.from_json(json)
+# print the JSON string representation of the object
+print(AppealRequestsShow.to_json())
+
+# convert the object into a dict
+appeal_requests_show_dict = appeal_requests_show_instance.to_dict()
+# create an instance of AppealRequestsShow from a dict
+appeal_requests_show_from_dict = AppealRequestsShow.from_dict(appeal_requests_show_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+

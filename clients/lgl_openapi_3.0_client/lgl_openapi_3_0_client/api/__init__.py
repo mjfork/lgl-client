@@ -1,0 +1,36 @@
+# flake8: noqa
+
+# import apis into api package
+from lgl_openapi_3_0_client.api.appeal_requests_api import AppealRequestsApi
+from lgl_openapi_3_0_client.api.appeals_api import AppealsApi
+from lgl_openapi_3_0_client.api.attributes_api import AttributesApi
+from lgl_openapi_3_0_client.api.campaigns_api import CampaignsApi
+from lgl_openapi_3_0_client.api.categories_api import CategoriesApi
+from lgl_openapi_3_0_client.api.class_affiliation_types_api import ClassAffiliationTypesApi
+from lgl_openapi_3_0_client.api.class_affiliations_api import ClassAffiliationsApi
+from lgl_openapi_3_0_client.api.constituent_relationships_api import ConstituentRelationshipsApi
+from lgl_openapi_3_0_client.api.constituents_api import ConstituentsApi
+from lgl_openapi_3_0_client.api.contact_reports_api import ContactReportsApi
+from lgl_openapi_3_0_client.api.email_addresses_api import EmailAddressesApi
+from lgl_openapi_3_0_client.api.events_api import EventsApi
+from lgl_openapi_3_0_client.api.funds_api import FundsApi
+from lgl_openapi_3_0_client.api.gift_categories_api import GiftCategoriesApi
+from lgl_openapi_3_0_client.api.gift_types_api import GiftTypesApi
+from lgl_openapi_3_0_client.api.gifts_api import GiftsApi
+from lgl_openapi_3_0_client.api.group_memberships_api import GroupMembershipsApi
+from lgl_openapi_3_0_client.api.groups_api import GroupsApi
+from lgl_openapi_3_0_client.api.invitations_api import InvitationsApi
+from lgl_openapi_3_0_client.api.keywords_api import KeywordsApi
+from lgl_openapi_3_0_client.api.mailing_templates_api import MailingTemplatesApi
+from lgl_openapi_3_0_client.api.membership_levels_api import MembershipLevelsApi
+from lgl_openapi_3_0_client.api.memberships_api import MembershipsApi
+from lgl_openapi_3_0_client.api.notes_api import NotesApi
+from lgl_openapi_3_0_client.api.payment_types_api import PaymentTypesApi
+from lgl_openapi_3_0_client.api.phone_numbers_api import PhoneNumbersApi
+from lgl_openapi_3_0_client.api.relationship_types_api import RelationshipTypesApi
+from lgl_openapi_3_0_client.api.street_addresses_api import StreetAddressesApi
+from lgl_openapi_3_0_client.api.team_members_api import TeamMembersApi
+from lgl_openapi_3_0_client.api.types_api import TypesApi
+from lgl_openapi_3_0_client.api.volunteer_times_api import VolunteerTimesApi
+from lgl_openapi_3_0_client.api.web_addresses_api import WebAddressesApi
+
